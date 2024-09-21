@@ -14,7 +14,7 @@ class Esh < Formula
     (testpath/"template").write <<~EOS
       <%= $(echo Hello esh!) %>
     EOS
-    version_output = shell_output("#{bin}/esh template")
-    assert_match "Hello esh!", version_output
+    template = shell_output("#{bin}/esh template")
+    assert_match "Hello esh!", template
   end
 end
