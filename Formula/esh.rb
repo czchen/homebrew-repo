@@ -9,7 +9,7 @@ class Esh < Formula
   depends_on "asciidoctor"
 
   def install
-    system "make", "install", "PREFIX=#{prefix}"
+    system "make", "install", "prefix=#{prefix}"
   end
 
   test do
