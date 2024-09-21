@@ -6,6 +6,8 @@ class Esh < Formula
   license "MIT"
   head "https://github.com/jirutka/esh", branch: "master"
 
+  depends_on "asciidoctor" => :install
+
   def install
     system "make", "install", "PREFIX=#{prefix}"
   end
