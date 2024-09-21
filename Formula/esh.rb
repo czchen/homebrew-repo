@@ -12,7 +12,7 @@ class Esh < Formula
 
   test do
     (testpath/"template").write <<~EOS
-    <%= $(echo Hello esh!) %>
+      <%= $(echo Hello esh!) %>
     EOS
     version_output = shell_output("#{bin}/esh template")
     assert_match "Hello esh!", version_output
