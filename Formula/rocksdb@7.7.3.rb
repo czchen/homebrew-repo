@@ -6,15 +6,6 @@ class RocksdbAT773 < Formula
   license any_of: ["GPL-2.0-only", "Apache-2.0"]
   head "https://github.com/facebook/rocksdb.git", branch: "main"
 
-  bottle do
-    sha256 cellar: :any,                 arm64_monterey: "4a918ce58c701611caafbeb7920be1dbc7b22487bf69e8c4b237e27d329baac8"
-    sha256 cellar: :any,                 arm64_big_sur:  "a71c588f37b1d41da4b596f7abfed6fff2d211614520f9d1c2704ba8118bb030"
-    sha256 cellar: :any,                 monterey:       "9503bc2fbe42f6b0adcc4c9ba2fa2f3e61c4e52a586b91a4b92b7783ae0041da"
-    sha256 cellar: :any,                 big_sur:        "75c3c90460106b496c9cda90ec6d6a8a7321572af9b78f0b2290210107ef8a44"
-    sha256 cellar: :any,                 catalina:       "e076a97813c83381ab3ba885cd6bdcf0189ff6178cc58948b47fda7e2c3c1062"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cecd675bc18a1212b33f6a302547296f3c60d6ef181706bdea00d626c9f00c67"
-  end
-
   depends_on "cmake" => :build
   depends_on "gflags"
   depends_on "lz4"
