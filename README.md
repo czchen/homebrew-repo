@@ -1,5 +1,8 @@
 # czchen Repo
 
+[![brew test-bot](https://github.com/czchen/homebrew-repo/actions/workflows/tests.yml/badge.svg)](https://github.com/czchen/homebrew-repo/actions/workflows/tests.yml)
+[![brew pr-pull](https://github.com/czchen/homebrew-repo/actions/workflows/publish.yml/badge.svg)](https://github.com/czchen/homebrew-repo/actions/workflows/publish.yml)
+
 ## How do I install these formulae?
 
 `brew install czchen/repo/<formula>`
