@@ -1,4 +1,4 @@
-class Rocksdb < Formula
+class RocksdbAT773 < Formula
   desc "Embeddable, persistent key-value store for fast storage"
   homepage "https://rocksdb.org/"
   url "https://github.com/facebook/rocksdb/archive/v7.7.3.tar.gz"
