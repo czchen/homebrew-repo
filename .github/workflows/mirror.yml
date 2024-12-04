@@ -16,6 +16,6 @@ jobs:
     - name: Sync to GitLab
       uses: wangchucheng/git-repo-sync@v0.1.0
       with:
-        target-url: ${{ env.GITLAB_URL }}
-        target-username: ${{ env.GITLAB_USERNAME }}
+        target-url: ${{ vars.GITLAB_URL }}
+        target-username: ${{ vars.GITLAB_USERNAME }}
         target-token: ${{ secrets.GITLAB_TOKEN }}
