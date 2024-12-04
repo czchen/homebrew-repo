@@ -1,19 +1,21 @@
-name: gitlab-mirror
+name: mirror
 
 on:
   - push
   - delete
 
 jobs:
-  gitlab-mirror:
+  mirror:
     runs-on: ubuntu-latest
-    name: Git Repo Sync
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout
+      uses: actions/checkout@v4
       with:
         fetch-depth: 0
-    - uses: wangchucheng/git-repo-sync@v0.1.0
+
+    - name: Sync to GitLab
+      uses: wangchucheng/git-repo-sync@v0.1.0
       with:
-        target-url: https://gitlab.com/czchen/homebrew-repo.git
+        target-url: ${{ secrets.GITLAB_URL }}
         target-username: ${{ secrets.GITLAB_USERNAME }}
         target-token: ${{ secrets.GITLAB_TOKEN }}
