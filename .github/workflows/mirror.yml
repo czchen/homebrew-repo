@@ -5,17 +5,32 @@ on:
   - delete
 
 jobs:
+  framagit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Sync to Framagit
+        uses: wangchucheng/git-repo-sync@v0.1.0
+        with:
+          target-url: ${{ secrets.FRAMAGIT_URL }}
+          target-username: ${{ secrets.FRAMAGIT_USERNAME }}
+          target-token: ${{ secrets.FRAMAGIT_TOKEN }}
+
   gitlab:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v5
-      with:
-        fetch-depth: 0
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
-    - name: Sync to GitLab
-      uses: wangchucheng/git-repo-sync@v0.1.0
-      with:
-        target-url: ${{ secrets.GITLAB_URL }}
-        target-username: ${{ secrets.GITLAB_USERNAME }}
-        target-token: ${{ secrets.GITLAB_TOKEN }}
+      - name: Sync to GitLab
+        uses: wangchucheng/git-repo-sync@v0.1.0
+        with:
+          target-url: ${{ secrets.GITLAB_URL }}
+          target-username: ${{ secrets.GITLAB_USERNAME }}
+          target-token: ${{ secrets.GITLAB_TOKEN }}
